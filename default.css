@@ -1,0 +1,445 @@
+:root{
+
+    --mainColor:#eaeaea;/*light grey for main page*/
+    --secondaryColor:#fff; /*white color*/
+
+    --borderColor:#c1c1c1; /*color for the border*/
+
+    --mainText:black;/*black color*/
+    --secondaryText:#4b5156; /*light black color*/
+
+    --themeDotBorder: #24292e; /* this dark color will provide color to border to theme dots */
+
+    --previewBg: rgb(251, 249, 243, 0.8); /* this will have a transparent bg */
+
+    --previewShadow: #f0ead6;
+
+    --btnColor: black;
+}
+
+/* BODY */
+html, body{
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, strong{
+color: var(--mainText);
+font-family: 'Russo One', sans-serif;
+font-weight: 500;
+
+}
+
+p, li, span, label, input, textarea{
+
+    color: var(--secondaryText);
+
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+/* making sure that links dont have undelines */
+a{
+    text-decoration: none;
+    color: #17a2b8; /*light blue hex color*/
+}
+
+/* removing bullets on ul lists to be used for navigation */
+ul{
+    list-style: none;
+}
+
+/* setting the sizes of headings tags */
+h1{font-size: 56px;}
+h2{font-size: 36px;}
+h3{font-size: 28px;}
+h4{font-size: 26px;}
+h5{font-size: 20px;}
+h6{font-size: 16px;}
+
+/* creating the selection classes of s1 and s2 */
+.s1{
+    background-color: var(--mainColor);
+    border-bottom: 1px solid var(--borderColor);
+    overflow: auto;
+}
+
+.s2{
+    background-color: var(--secondaryColor);
+    border-bottom: 1px solid var(--borderColor);
+    overflow: auto;
+}
+/* the container is to aid in centering the contents */
+
+.main-container{
+    
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.greeting-wrapper{
+    display: grid;
+    text-align: center;
+    /* justify-content: center; */
+    align-items: center;
+    /* border: 2px dashed lightcoral; */
+    min-height: 10em;
+}
+
+/* INTRO BAR */
+.intro-wrapper{
+    background-color: var(--secondaryColor);
+    border: 1px solid var(--borderColor);
+
+    border-radius: 5px 5px 0 0;
+
+    -webkit-box-shadow: -1px 1px 3px -1px rgb(0,0,0,0.75);
+    -moz-box-shadow:  -1px 1px 3px -1px rgb(0,0,0,0.75);
+    box-shadow: -1px 1px 3px -1px rgb(0,0,0,0.75);
+
+/* setting up the grid area */
+
+display: grid;
+grid-template-columns: 1fr 1fr;
+/*grid-template-rows: 3em 30em;*/ /*sets grid rows size to 3 at top and 30 at bottom, concept similar to columns */
+grid-template-areas: 
+
+    'nav-wrapper nav-wrapper' /*creating a string on various rows within the areas
+                this also means insert string into the template columns abv and span in both frs(nav)*/
+    'left-column right-column' /*writing on next line not necessary just for visual effect
+    this will make the left and right columns next to each other*/
+
+;
+
+}
+
+/* NAVIGATION BAR */
+/* creating classes for nav-wrapper and columns */
+
+.nav-wrapper{
+    border-radius: 5px 5px 0 0;
+grid-area: nav-wrapper; /* creating identifier for nav and the rest columns*/
+    /* border: 1px dashed lightcoral; */
+border-bottom: 1px solid var(--borderColor);
+
+display: flex; /*this aligns nav contents from left to right but close to each other */
+justify-content: space-between; /*this evenly distributes the nav items along the same line */
+align-items: center; /* this can be used instead of align-content, u cn use align-items
+to create space above/align vertically the items */
+background-color: var(--mainColor);
+
+}
+
+#navigation{
+    margin: 0;
+    padding: 10px;
+}
+
+#navigation li{
+    display: inline-block;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.dots-wrapper{
+    display: flex; /* this will align them left to right */
+    padding: 10px; /* for establishing uniform space in btn  the items and the innerwalls of the nav */
+}
+
+#dot1{
+    background-color: #FC6058;
+}
+
+#dot2{
+    background-color: #fec20f;
+}
+
+#dot3{
+    background-color: #2aca3e;
+}
+
+.browser-dot{
+    background-color: black;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%; /*this will make them circular */
+    margin: 5px; /* to create some space in btn */
+
+
+    -webkit-box-shadow: -1px 1px 3px -1px rgb(0,0,0,0.75);
+    -moz-box-shadow:  -1px 1px 3px -1px rgb(0,0,0,0.75);
+    box-shadow: -1px 1px 3px -1px rgb(0,0,0,0.75);
+
+    
+}
+
+/* LEFT COLUMN */
+.left-column{
+    grid-area: left-column;
+    /* border: 1px dashed lightcoral; */
+    
+    /* the paddings will detach the img from top and let it hang center */
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#profile_pic{
+    display: block;
+    margin: 0 auto;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border: 2px solid var(--borderColor);
+}
+
+#theme-option-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.theme-dot{
+    height: 30px;
+    width: 30px;
+    background-color: black;
+    border-radius: 50%;
+
+    margin: 5px;
+    border: 2px solid var(--themeDotBorder);
+
+    -webkit-box-shadow: -1px 1px 3px -1px rgb(0,0,0,0.75);
+    -moz-box-shadow:  -1px 1px 3px -1px rgb(0,0,0,0.75);
+    box-shadow: -1px 1px 3px -1px rgb(0,0,0,0.75);
+
+    cursor: pointer;
+}
+
+.theme-dot:hover{
+    border-width: 5px;
+}
+
+#light-mode{
+    background-color: #fff;
+}
+
+#blue-mode{
+    background-color: #192734;
+}
+
+#green-mode{
+    background-color: #78866b;
+}
+
+#purple-mode{
+    background-color: #7e4c74;
+}
+
+#settings-note{
+    font-size: 12px;
+    font-style: italic;
+    text-align: center;
+}
+
+/* RIGHT COLUMN */
+.right-column{
+    grid-area: right-column;
+    /* border: 1px dashed lightcoral; */
+    display: grid; /*this will help center the div right column contents on the vertical axis.
+     flex can also work but since we've been using grid, let's keep at that. */
+
+    align-content: center; /* we dont "justify content" coz we want it to start on the left margin */
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#preview-shadow{
+    background-color: var(--previewShadow);
+    width: 300px;
+    height: 180px; /* this will create an effect as if its behid it at a certain angle */
+    padding-left: 30px;
+    padding-top: 30px;
+}
+
+#preview{
+    width: 300px;
+    border: 1.5px solid #17a2b8;
+    background-color: var(--previewBg);
+    padding: 15px;
+    position: relative; /*this helps to make the dots to pstn in the intended
+     corners since initialy they hid due to parent "corner" positioning property */
+}
+
+.corner{
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    border: 1.5px solid #17a2b8;
+    background-color: #fff;
+    position: absolute;
+}
+
+#corner-topleft{
+    top: -5px;
+    left: -5px;
+}
+
+#corner-topright{
+    top: -5px;
+    right: -5px;
+}
+
+#corner-bottomright{
+    bottom: -5px;
+    right: -5px;
+}
+
+#corner-bottomleft{
+    bottom: -5px;
+    left: -5px;
+}
+
+/* SOCIALS SECTION */
+
+/* below setting up the <ul> into 2 columns using grid */
+.about-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 100px;
+}
+
+#skills{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--previewShadow);
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.social-links{
+    display: grid;
+    align-content: center;
+    text-align: center;
+}
+
+#social_img{
+    width:100%;
+}
+
+.post-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 320px);
+    gap: 20px;
+    justify-content: center;
+    padding: 50px;
+}
+
+.post{
+    border: 1px solid var(--borderColor);
+
+    --webkit-box-shadow: -2px 7px 21px -9px rgba(0,0,0.75);
+    -moz-box-shadow: -2px 7px 21px -9px rgba(0,0,0.75);
+    box-shadow: -2px 7px 21px -9px rgba(0,0,0.75);
+
+}
+
+.thumbnail{
+    display:block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+
+}
+
+.post-preview{
+    background-color: #fff;
+    padding: 15px;
+}
+
+.post-title{
+    color: black;
+    margin: 0; /* this removes the line at the top of the img */
+}
+
+.post-intro{
+    color: #4b5156;
+    font-size: 14px;
+}
+
+/* Contact section */
+
+#contact-form{
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid var(--borderColor);
+    padding: 15px;
+    border-radius: 5px;
+    background-color: var(--mainColor);
+    margin-bottom: 50px;
+
+}
+
+#contact-form label{
+    line-height: 2.7em; /* this will separate the label text eg 'Name' from the input field */
+
+}
+
+#contact-form textarea{
+    min-height: 100px;
+    font-size: 14px;
+}
+
+.input-field{
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: var(--secondaryColor);
+    border-radius: 5px;
+    border: 1px solid var(--borderColor);
+    font-size: 14px;
+}
+
+#submit-btn{
+    margin-top: 10px;
+    width: 100%;
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: var(--btnColor);
+    border: none;
+}
+
+/* creating a media query enable the items in the container
+adjust with change in screen size*/
+
+@media screen and (max-width: 1200px){
+    .main-container{
+        width: 95%;
+}
+}
+
+/* below we're trying to make the screen responsive at about 800px of narrowness
+ so that columns just stack over each other instead of being cut off at some point */
+
+@media screen and (max-width: 800px){
+    .intro-wrapper{
+           
+        grid-template-columns: 1fr;
+        /*grid-template-rows: 3em 30em;*/ /*sets grid rows size to 3 at top and 30 at bottom, concept similar to columns */
+        grid-template-areas: 
+        
+            'nav-wrapper' /*creating a string on various rows within the areas
+                        this also means insert string into the template columns abv and span in both frs(nav)*/
+            'left-column' /*writing on next line not necessary just for visual effect
+            this will make the left and right columns next to each other*/
+            'right-column'
+        
+        ;
+    
+    }
+
+    .right-column{
+        justify-content: center;
+    }
+}

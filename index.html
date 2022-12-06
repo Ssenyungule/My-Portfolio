@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta desc="Full Stack Web developer, System Administartor" />
+    <title>Ssenyungule Herbert</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" type="text/css" href="default.css" />
+  </head>
+  <body>
+    <!-- INTRO, NAV AND ABOUT ME SECTION -->
+    <section class="s1">
+      <div class="main-container">
+        <div class="greeting-wrapper">
+          <h1>Hi, I'm Ssenyungule Herbert</h1>
+        </div>
+
+        <!-- <p>I am a full stack web developer.</p>
+        <p>
+          Additionally, I do System administration and Network configuration
+          too.
+        </p>
+        <a href="#">Link</a> -->
+      </div>
+
+      <div class="intro-wrapper">
+        <div class="nav-wrapper">
+          <!--this will help in positioning of the nav content in a flexbox to left and right-->
+          <div class="dots-wrapper">
+            <!-- the divs below will have different ids for color component change but similar class-->
+
+            <div id="dot1" class="browser-dot"></div>
+
+            <div id="dot2" class="browser-dot"></div>
+
+            <div id="dot3" class="browser-dot"></div>
+          </div>
+
+          <!-- below is a div but later to be turned into a link -->
+          <ul id="navigation">
+            <li><a href="#">Contact</a></li>
+            <!-- <li><a href="#">Contact</a></li> -->
+          </ul>
+        </div>
+
+        <div class="left-column">
+          <img id="profile_pic" src="img/ngule.jpg" />
+          <h5 style="text-align: center; line-height: 0">Personalize Theme</h5>
+
+          <div id="theme-option-wrapper">
+            <div id="light-mode" class="theme-dot"></div>
+            <div id="blue-mode" class="theme-dot"></div>
+            <div id="green-mode" class="theme-dot"></div>
+            <div id="purple-mode" class="theme-dot"></div>
+          </div>
+          <p id="settings-note">
+            *Theme will be saved for <br />
+            your next visit.
+          </p>
+        </div>
+
+        <div class="right-column">
+          <!-- this will help in creating the shadow-->
+          <div id="preview-shadow">
+            <div id="preview">
+              <div id="corner-topleft" class="corner"></div>
+              <div id="corner-topright" class="corner"></div>
+
+              <h3>What I Do</h3>
+              <p>
+                I am a junior Fullstack web developer. <br />
+                I create websites and web applications for clients.
+              </p>
+
+              <div id="corner-bottomright" class="corner"></div>
+              <div id="corner-bottomleft" class="corner"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOCIAL MEDIA SECTION -->
+    <section class="s2">
+      <div class="main-container">
+        <div class="about-wrapper">
+          <div class="about-me">
+            <h4>More About Me</h4>
+            <p>
+              I love building projects just to tickle my brain and teaching
+              others how they're done.
+            </p>
+            <p>
+              While I keep teaching others, I still take interviews in search
+              for a great team & projects that interest.
+            </p>
+
+            <hr />
+
+            <h4>Top Expertise</h4>
+            <p>
+              Fullstack developer with primary focus on Django + React:<a
+                target="_blank"
+                href="resume.pdf"
+                >Download Resume</a
+              >
+            </p>
+
+            <div id="skills">
+              <ul>
+                <li>Python</li>
+                <li>Django</li>
+                <li>PhP</li>
+                <li>Laravel</li>
+                <li>JavaScript</li>
+                <li>React</li>
+              </ul>
+
+              <ul>
+                <li>HTML/CSS</li>
+                <li>Java</li>
+                <li>MariaDB/MYSQL</li>
+                <li>C</li>
+                <li>Fast API</li>
+                <li>Node Js</li>
+              </ul>
+            </div>
+          </div>
+          <div class="social-links">
+            <img id="social_img" src="img/twit.png" />
+            <h3>Follow Me on Twitter</h3>
+            <!-- https://twitter.com/Ssenyungule256 -->
+            <a target="_blank" href="#">Twitter: @Ssenyungule256</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION -->
+    <section class="s1">
+      <div class="main-container">
+        <h3 style="text-align: center">Some of my Past Projects</h3>
+
+        <div class="post-wrapper">
+          <div>
+            <div class="post">
+              <img class="thumbnail" src="img/pong2.png" />
+              <div class="post-preview">
+                <h6 class="post-title">Ping Pong Game</h6>
+                <p class="post-intro">
+                  This is an entirely python developed game.
+                </p>
+
+                <p>
+                  A player uses A and Z keys to move paddles on the left hand
+                  side and alternatively use up & down arrow keys to move the
+                  paddles on the right hand side of the screen.
+                </p>
+                <a href="#">Read More</a>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="post">
+              <img class="thumbnail" src="img/pub.png" />
+              <div class="post-preview">
+                <h6 class="post-title">ISTCOM Publications</h6>
+                <p class="post-intro">
+                  This is a university project I worked on in my second year at
+                  college of computing and information sciences,Makerere
+                  University Kampala.
+                </p>
+                <p>
+                  It's a web system which allows users to view and borrow
+                  publications.
+                </p>
+                <p>
+                  It also allows the admin to login and do necessary changes to
+                  publications like <em>Add, Delete and Edit.</em>
+                </p>
+                <a href="#">Read More</a>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="post">
+              <img class="thumbnail" src="img/ssenyu.JPG" />
+
+              <div class="post-preview">
+                <h6 class="post-title">Tech Ed Project</h6>
+                <p class="post-intro">
+                  I have been an MsExcel and Python Instructor at CEED Uganda's
+                  Tech Ed Project 2<sup>nd</sup> Edition 2021.
+                </p>
+                <p>
+                  CEED Uganda is not for profit Organization, situated in
+                  Gulu-Uganda, working in partnership with CEED Concordia in
+                  Canada to empower young people to become positive change
+                  agents in their communities.
+                </p>
+                <a href="#">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact section -->
+    <section class="s2">
+      <div class="main-container">
+        <h3 style="text-align: center">Get in Touch</h3>
+        <form id="contact-form">
+          <label>Name</label>
+          <input class="input-field" type="text" name="name" />
+
+          <label>Subject</label>
+          <input class="input-field" type="text" name="subject" />
+
+          <label>Email</label>
+          <input class="input-field" type="text" name="email" />
+
+          <label>Message</label>
+          <textarea class="input-field" type="text" name="message"></textarea>
+
+          <input id="submit-btn" type="submit" value="Send" />
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
